@@ -1,0 +1,78 @@
+{
+    "errno":0,
+    "errmsg":"api successful",
+    "curTime":1439301406,
+    "data":{
+        "cityid":1,
+        "curVersion":"invalidVersion",
+        "bannerConf":{
+            "menuList":[
+                        {
+                        "name":"出租车",
+                        "menuId":257,
+                        "startTime":1438836613,
+                        "openStatus":1,
+                        "flipStatus":1,
+                        },
+                        {
+                        "name":"专车",
+                        "menuId":258,
+                        "startTime":1438836573,
+                        "openStatus":1,
+                        "flipStatus":1,
+                        "defaultSubMenu":100,
+                        "subMenuRange":[
+                                        {
+                                        "name":"舒适型",
+                                        "menuId":100
+                                        },
+                                        {
+                                        "name":"豪华型",
+                                        "menuId":200
+                                        },
+                                        {
+                                        "name":"商务型",
+                                        "menuId":400
+                                        }
+                                        ],
+                        },
+                        {
+                        "name":"顺风车",
+                        "menuId":259,
+                        "startTime":1438836632,
+                        "openStatus":1,
+                        "flipStatus":1,
+                        },
+                        {
+                        "name":"快车",
+                        "menuId":260,
+                        "startTime":1438656329,
+                        "openStatus":1,
+                        "flipStatus":1,
+                        },
+                        {
+                        "name": "代驾",
+                        "menuId": 261,
+                        "startTime": 1431014272,
+                        "openStatus": 1,
+                        "flipStatus": 0,
+                        }
+                        ],
+            "menuRange":[
+                         259,
+                         260,
+                         257,
+                         258,
+                         261
+                         ],
+            "rangeStart":1438833096,
+            "defaultMenu":260,
+            "defaultMenuStart":1438833108,
+            "defaultMenuEnd":4573012310
+        },
+        "smooth":{
+            "home_frequency":5,
+            "going_frequency":10
+        }
+    }
+}

@@ -1,0 +1,67 @@
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiBeatlesProtobuf";
+
+package DidiPush;
+
+message BeatlesOrderDataChangedTipReq {
+    //订单id
+    required string order_id = 1 ;
+    //订单角色(0乘客/1车主)
+    required uint32 user_role = 2 ;
+    //订单列表分类(0待处理订单/1司机可抢单)
+    required uint32 order_list_type = 3 ;
+    //订单主状态(参考乘客/司机订单详情)
+    required uint32 status = 4 ;
+    //订单子状态(参考乘客/司机订单详情)
+    required uint32 sub_status = 5 ;
+    //订单数据本次变化字符串(例1：你的订单已经被XX司机抢单,赶快去看看吧！ 例2：您有订单半小时后出发，例3：司机已经抢单请去支付，例4：乘客已经支付 例例5：订单由于xxx，乘客已经被乘客取消，例6.订单已经被抢，例7。订单已超时)
+    required string change_text = 6 ;
+    //是否显示提示消息，0表示不显示，1显示，默认不显示
+    optional uint32  show = 7 ;
+    //用于订单列表中下面的
+    required string  list_text = 8 ;
+    //列表类型    0 一般订单   1 求带走单
+    optional uint32  order_type = 9;
+}
+
+message BeatlesDriverNewOrderTipReq {
+    //订单列表分类(0附件订单/1顺风车)
+    required uint32 order_list_type = 1 ;
+    optional uint32 new_order_cnt = 2 ;
+}
+
+// 顺路单push
+message BeatlesNormalOrderPushReq {
+    //订单id
+    required string order_id = 1;
+    //路线id
+    required string route_id = 2;
+    //推送文本
+    required string push_text = 3;
+    //头像
+    optional string head_url = 4;
+    //出发地
+    optional string from_name = 5;
+    //目的地
+    optional string to_name = 6;
+    //留言
+    optional string extra_info = 7;
+    //出发时间描述
+    optional string setup_time_desc = 8;
+    //类型 , 0 是顺路， 1 是求带走
+    optional uint32 order_type = 9;
+}
+
+message BeatlesRoutePushReq {
+	required uint64 route_id = 1; //路线ID
+	required uint32 status = 2; // 1 进行中 2 超时
+	optional uint32 new_order_cnt = 3; // 该路线新订单数 
+	optional uint32 route_type = 4;  // 是否常用路线
+	
+}
+
+message BeatlesReportControlPushReq {
+    required uint32 need_report = 1; //0当前不需要上报位置信息/1当前需要上报 
+    optional uint32 freq = 2;         //当前上传频率
+    optional uint32 duration = 3;    //默认最大时长60分钟(单位s秒)
+}

@@ -1,0 +1,180 @@
+package DidiPush;
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiDispatchProtobuf";
+
+import "didi_protocol.proto";
+import "didi_protocol_common.proto";
+import "didi_protocol_gulfstream.proto";
+
+// 这里是所有客户端上行到PHP的请求
+
+// Dispatch payload消息的类型
+enum DispatchMessageType {
+	// 司机主动拉取订单的请求
+    kDispatchMessageTypeDriverOrderGetReq         = 0x01 ;
+	// 上报是否安装了竞争产品
+    kDispatchMessageTypeMonitorResultReq          = 0x02 ;
+	kDispatchMessageTypeOnlineModeConnectReq      = 0x03;
+	kDispatchMessageTypeOnlineModeDisconnectReq   = 0x04;
+	kDispatchMessageTypePassengerOrderGetReq      = 0x05;
+	kDispatchMessageTypeDriverOrderMoneyGetReq    = 0x06;
+	//乘客主动拉取支付结果
+	kDispatchMessageTypePassengerPayStatusReq     = 0x07 ;
+	// 司机过滤订单请求
+	kDispatchMessageTypeDriverFilterOrderReq	  = 0x08 ;
+    kDispatchMessageTypePassengerDiverLocGetByLocReq = 0x09;
+    kDispatchMessageTypePassengerDiverLocGetByIdReq = 0x0a;
+    //企业业务请求入口
+    kDispatchMessageTypeESMessageReq = 0x0b;
+    //司机端新的上传消息
+    kDispatchMessageTypeTravelDriverOrderMoneyGetReq = 0x10; 
+};
+
+enum OrderStat {
+	// 首页
+    HomePage    = 1 ;
+	// 等待发单
+    SendOrder   = 2 ;
+	// 等待接驾
+    WaitPick    = 3 ;
+	// 行程中
+    OnTrip      = 4 ;
+}
+
+// 司机主动拉取订单的请求
+message DriverOrderGetReq {
+	// 司机手机号
+	required string phone = 1 ;
+	// 司机端token
+	required string token = 2 ;
+	message LastStatus {
+	// 上一次订单id
+		required string oid = 1 ;
+	// 下载状态(0:成功 1:失败)
+		required int32 down = 2 ;
+	// 播放状态(0:成功 1:失败)
+		required int32 play = 3 ;
+	// 取消状态
+		required int32 cancel = 4 ;
+	// 订单是否手动删除
+		optional int32 cancelOrder = 5 ;
+	// 拼车单里面的子订单ID列表
+		repeated string sub_order_id = 6 ;
+	};
+	required LastStatus lastStatus = 3;
+};
+
+// 上报是否安装了竞争产品的请求
+message MonitorResultReq {
+	// 竞争产品状态
+	required int32 pkgRsp = 1 ;
+}
+
+//上报订单信息获取订单状态
+message PassengerOrderGetReq {
+	required string phone = 1;
+	required string token = 2;
+	required string oid = 3;
+	required int32 status = 4;
+	required string wait = 5;
+	required Coordinate coordinate = 6;
+}
+
+
+//司机实时上报经纬度并获取费用信息
+message DriverOrderMoneyGetReq {
+	//司机手机号
+	required string phone = 1 ;
+	//司机端token
+	required string token = 2 ;
+	//订单ID
+	required string oid	= 3 ;
+	//经纬度数组
+	repeated LocationInfo info = 4 ;
+	//以下为上次服务器反馈的小费信息再次发给服务器，防止服务器之前的缓存丢失；
+	//费用信息
+	optional DrivingFeeInfo feeInfo = 5 ;
+	//是否司机端动态配置
+    optional int32 is_price_conf = 6 ;
+	//新费用明细
+    repeated FeeInfoItem new_fee_info = 7 ;
+};
+
+//乘客主动拉取支付结果
+message PassengerPayStatusReq {
+	//订单号
+	required string oid = 1 ;
+	//当前乘客端已知的付款状态，1:成功，0：失败
+	required int32 trade_status = 2 ;
+	//乘客端token
+	required string token = 3 ;
+}
+
+// 司机过滤订单的请求
+message DriverFilterOrderReq {
+	// 司机手机号
+	required string phone = 1 ;
+	// 司机端token
+	required string token = 2 ;
+	message LastFilter {
+	// 过滤订单id
+		required string order_id = 1 ;
+		required int32 filter_type = 2;
+		// 过滤类型,定义在didi_protocol_common.proto里面的DriverOrderFilterType
+	
+		optional bytes send_info = 3 ;
+		// 司机该次播单包含的信息，是定义在didi_protocol_common.proto
+		// 里面的DriverBroadcastOrderExtraInfo串行化之后的数据
+	// 播单类型
+        optional int32 broadcast_type = 4 ;
+        required string current_page = 5;
+	};
+	required LastFilter lastFilter = 3;
+};
+
+//乘客端依据地址位置获取周边司机
+message PassengerDiverLocGetReq {
+    required string phone_num = 1;
+    required int32 role = 2;
+    required double lat = 3;
+    required double lng = 4;
+    required double radius = 5;
+    required int32 channel = 6;
+    optional int32 type = 7;
+    optional int32 timestamp = 8;
+    optional OrderStat  order_stat = 9;
+};
+
+//乘客端依据司机id获取司机当前坐标信息
+message PassengerDiverLocGetByIdReq {
+    required string phone_num = 1;
+    required int32 role = 2;
+    required int32 channel = 3;
+    repeated int64 diverIds = 4;
+    optional int32 type = 5;
+    optional int32 timestamp = 6;
+    // lat、lng如果未传入，任何情况都不会返回eta
+    optional OrderStat order_stat = 7;
+    optional double lat = 8;
+    optional double lng = 9;
+    //tlat, tlng目的地经纬度
+    optional double tlat = 10;
+    optional double tlng = 11;
+};
+
+//行程计价信息                                                 
+message TravelDriverOrderMoneyGetReq {                           
+    //司机手机号                                         
+    required string phone = 1 ;                                 
+    //司机端token                                                 
+    required string token = 2 ;                                  
+    //行程计价                                                    
+    required TravelRealtimeFeeReq travel_realtime_fee = 3;        
+    //经纬度数组                                                
+    repeated LocationInfo info = 4;                             
+};
+
+
+
+

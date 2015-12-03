@@ -1,0 +1,110 @@
+	
+package DidiPush ;
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiGulfstreamProtobuf";
+
+import "didi_protocol_common.proto";
+
+//行程计价信息 
+message TravelRealtimeFeeReq {                                    
+    //行程单ID
+    required string travel_id = 1;                               
+    //单个订单计价信息                                          
+    repeated OrderRealtimeFeeReq order_realtime_fee = 2;        
+}
+
+
+//费用item
+message FeeInfoItem {
+	// 费用名称
+    required string fee_label = 1 ;
+	// 费用数值
+    required string fee_value = 2 ;
+	// 费用类型 (1:里程 2:时长)
+    required int32 fee_type = 3 ;
+	// 跳转链接
+    optional string fee_url = 4 ;
+	// 费用项定制
+    optional int32 fee_cust = 5 ;
+	// 券的ID
+    optional string fee_id = 6 ;
+	// 费用展示颜色
+    optional string fee_color = 7 ;
+	// 费用字段的英文名称
+    optional string fee_key = 8 ;
+	// 是否可编辑
+    optional int32 is_edit = 9 ;
+	// 是否基础费用
+    optional int32 is_base_fee = 10 ;
+	// API使用的下发、上传费用信息
+    optional string fee_api = 11 ;
+}
+
+message FeeBottom { 
+	// 费用名称
+    optional string fee_label = 1 ;
+}
+
+
+//新计价信息
+message OrderRealtimeFeeReq {                                                                                                                 
+	//当前行驶轨迹(lat, lng)
+    repeated LocationInfo driving_track = 1 ;
+	//费用明细
+    repeated FeeInfoItem fee_info = 2 ;
+	//订单ID
+    optional string oid = 3 ;
+	//用于标识哪组坐标的费用
+    optional int32 timestamp = 4 ;
+	//总费用
+    optional string total_fee = 5 ;
+	//司机端底部计价配置
+    repeated FeeBottom fee_bottom = 6 ;
+}
+
+
+//新总价信息
+message OrderTotalFeeReq {
+	// 订单ID
+    required string oid = 1 ;
+	// 支付标题
+    required string pay_title = 2 ;
+	// 支付113元
+    required string pay_button_title = 3 ;
+	// 基础账单组成
+    repeated FeeInfoItem basicFeeInfoList = 4 ;
+	// 优惠账单组成
+    repeated FeeInfoItem favourFeeInfoList = 5 ;
+	// 支付类型(10:微信代扣)
+    optional int32 pay_type = 6 ;
+	// 是否要支付0.01元
+    optional int32 penny_flag = 7 ;
+	// 扩展信息(扣款时间文案)
+    optional string ext_msg = 8 ;
+	// 扣款受理状态
+    optional int32 order_pay_status = 9 ;
+	// "扣款受理中"
+    optional string order_pay_title = 10 ;
+	// "已收到您的支付请求"
+    optional string order_pay_subject = 11 ;
+	// "正在处理中..."
+    optional string order_pay_msg = 12 ;
+	// 报销信息
+    optional RefundInfoReq refund_info = 13 ;
+	// 支付按钮文案
+    optional string pay_button_title_label = 14 ;
+	// 支付方式
+    repeated Payments payments = 15 ;
+	// 优惠总额
+    optional string favour_total = 16 ;
+	//车费合计标题
+    optional string carfee_title = 17 ;
+	//车费合计金额(例:10.0元)
+    optional string carfee_total = 18 ;
+	//活动抵扣标题
+    optional string favour_title = 19 ;
+    //微信支付信息
+    optional string wxagent_payinfo = 20 ;
+}
+
+

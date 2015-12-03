@@ -1,0 +1,93 @@
+{
+    "timeoffset": 0,
+    "havenext": 0,
+    "errno": 0,
+    "order_waiting": [
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "上地软件园",
+			"toAddress": "育慧里",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+			    "ride_id": "1050011373560",
+			    "line_id": "175",
+			    "ride_status" : 1
+			},
+			"hisstatus": "待出发",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "上地软件园",
+			"toAddress": "育慧里",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+			    "ride_id": "1050011373561",
+			    "line_id": "175",
+			    "ride_status" : 2
+			},
+			"hisstatus": "进行中",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	],
+    "order_done": [
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "测试地点一",
+			"toAddress": "目的地点二",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+				"ride_id": "1050011373568",
+				"line_id": "175",
+				"ride_status" : 3
+			},
+			"hisstatus": "已完成",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "测试地点一",
+			"toAddress": "目的地点二",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+				"ride_id": "1050011373569",
+				"line_id": "175",
+				"ride_status" : 3
+			},
+			"hisstatus": "已完成",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "测试地点A",
+			"toAddress": "目的地点B",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+				"ride_id": "1050011373570",
+				"line_id": "175",
+				"ride_status" : 4
+			},
+			"hisstatus": "已退票",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	    {
+			"orderId": "TVRBMU1EQXhNVE0zTXpVMk9RPT0=",
+			"fromAddress": "测试地点A",
+			"toAddress": "目的地点B",
+			"setuptime": "2015-08-26 18:15:00",
+			"extra_data": {
+				"ride_id": "1050011373571",
+				"line_id": "175",
+				"ride_status" : 4
+			},
+			"hisstatus": "已退票",
+			"classtype": 1,
+			"product": "Tmc9PQ=="
+		},
+	],
+}

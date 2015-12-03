@@ -1,0 +1,198 @@
+package DidiPush;
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiESProtobuf";
+
+//v1.1增加了kPushMessageESTypeJourneyWaitPayReq、kMessageTypeESReqJourneyMsg消息，修改了PushMessageESType枚举值
+
+// Push下行消息payload消息的类型(企业产品)
+enum PushMessageESType {
+	//等待应答时的消息
+	kPushMessageESTypeWaitResponseReq					=	0x0301;
+	//订单状态变化消息
+	kPushMessageESTypeOrderStatusChangedReq				=	0x0302;
+	//行程中实时信息（计价、时间、坐标等）
+	kPushMessageESTypeRealTimeInfoReq					=	0x0303;
+	//行程结束消息
+	kPushMessageESTypeJourneyFinishedReq				=	0x0304;
+	//同步订单状态消息
+	kPushMessageESTypeSynOrderStatusReq					=	0x0305;
+}
+
+//APP上行请求类型
+enum MessageTypeESReq {
+	//等待应答时的上行轮询请求
+	kMessageTypeESReqWaitRspStatus						=	0x0001;
+	//拉取实时计价
+	kMessageTypeESReqRealTimeInfo						=	0x0002;
+	//同步订单状态请求
+	kMessageTypeESReqSynStatus							=	0x0003;
+	//查询支付状态
+	kMessageTypeESReqPayStatus							=	0x0004;
+}
+
+//企业业务APP上行请求消息//didi_protocol_dispatchsvr.proto#kDispatchMessageTypeESMessageReq对应的binaryMsg消息体
+message PushMessageESBodyReq	{
+	//上行消息的具体类型
+	required	MessageTypeESReq	type	=1;
+	optional 	bytes				body	=2;
+}
+
+//kMessageTypeESReqWaitRspStatus 上行请求的消息体
+message ReqBodyWaitRsp{
+	required string oid			=1;
+}
+
+//kMessageTypeESReqRealTimeInfo	上行请求的消息体
+message ESReqBodyRealTimeInfo{
+	required string oid			=1;
+	//app端订单状态
+	optional int32	status		=2;
+}
+//kMessageTypeESReqSynStatus	上行请求的消息体
+message ESReqBodySynStatus{
+	required string oid			=1;
+	//app端订单状态
+	required int32	status		=2;
+}
+
+//kMessageTypeESReqPayStatus	上行请求，查询订单支付状态
+message ESReqBodyQueryPayStatus {
+	required string 	oid			=1;
+}
+
+//等待应答时(司机抢单前)的消息kPushMessageESTypeWaitResponseReq
+message WaitResponseReq {
+	//订单号
+    required string oid				=1;
+    //等待应答的订单是否超时，0：未超时，1：超时了
+    required int32	time_out		=2;
+    //等待应答时，已推送司机数
+    optional int32	driver_num		=3;
+	//是否正在鱼鹰pk（依赖专车接口回调）
+    optional int32	is_finishPK		=4;
+    //鱼鹰pk司机数
+    optional int32  pk_driver_num	=5;
+    //鱼鹰pk时需要等待的时间(单位秒)
+    optional int32	pk_second		=6;
+    //鱼鹰pk时提示用户的文案
+    optional string pk_msg			=7;
+}
+
+//订单状态变化消息kPushMessageESTypeOrderStatusChangedReq
+message OrderStatusChangedReq {  
+	//订单号
+    required string oid				=1;
+    //订单最新状态
+    required int32	status			=2;
+    //司机信息(有司机抢单时或改派成功)
+    optional ESDriverInfo driver_info =3;
+    //订单状态对应的提示文案(司机迟到，每分钟将补贴您1元车费，应用内通知栏||本地通知展示的文案)
+    optional string		msg			=4;
+    //订单状态对应的title(navigator上显示的，司机已到、您已迟到等)
+    optional string		title		=5;
+    //司机坐标信息(订单被抢时需要)
+    optional LocationDetail	driver_location  =6;
+    //司机和乘客距离,单位: 米(订单被抢时需要)
+    optional uint32 distance 		=7;
+	//估计相遇时间,单位: 分钟(订单被抢时需要)
+    optional uint32 wait_time 		=8;
+    //订单界面抽屉上展示的文案
+    optional string 	msg_banner	=9;
+    //司机抢单的消息里面带上分享信息
+    optional ESShareInfo	share_info=10;
+    
+}
+
+message JourneyFeeInfo {
+	//已行驶距离(单位：公里)
+	required double		already_distance	=1;
+	//已行驶时长(单位：分钟)
+	required double		already_duration	=2;
+	//已经产生的总费用||行程结束时总费用(单位：元)
+	required double		total_fee			=3;
+	//行程结束时总里程(单位：公里)
+	required double		total_distance		=4;
+	//行程结束时总时长(单位：分钟)
+	required double		total_duration		=5;
+	//起步价
+	optional double		starting_price		=6;
+}
+
+//行程中实时消息kPushMessageESTypeRealTimeInfoReq
+message RealTimeInfoReq {
+	//订单号
+    required string oid				=1;
+    required JourneyFeeInfo	fee_info=2;
+    repeated LocationDetail	location=3;
+    
+}
+
+//司机信息model
+message ESDriverInfo {
+	required string driver_id		=1;
+	//车牌号
+	required string car_license		=2;
+	//司机名字
+	required string nickname		=3;
+	//司机电话
+	required string phone			=4;
+	//星级
+	optional float	star_level		=5;
+	//已抢单数
+	optional int32	cnt_order		=6;
+	//头像地址	
+	optional string avatar_url		=7;
+	//公司
+	optional string company			=8;
+	//车辆颜色
+	optional string car_color		=9;
+	//车辆类型（马自达6、奥迪a8）
+	optional string car_version		=10;
+	//车型title（舒适型、豪华型）
+	optional string car_type_title	=11;
+
+}
+
+//位置信息
+message LocationDetail {
+	//坐标
+	required double lat				=1;
+	required double lng				=2;
+	//车头方向
+	optional double direction		=3;
+	//车辆速度
+	optional double speed			=4;
+}
+
+//行程结束消息（企业支付、微信、支付宝支付）kPushMessageESTypeJourneyFinishedReq & 上行请求kMessageTypeESReqPayStatus的结果
+//这个消息里面包含支付状态
+message JourneyFinishedReq {
+	required string 			oid				=1;
+	required JourneyFeeInfo		fee_info		=2;
+	//服务完成时根据不同的支付结果给用户弹出的提示文案
+	optional string				msg				=3;
+	//支付结果的状态(1、待支付；2、支付成功；3、支付失败；4、支付受理中)
+	required int32				pay_status		=4;
+	//这个目前用于pay_status=1时，确认支付按钮附近显示的文案，
+	//eg:企业余额支付：此单有企业支付，09:30时将自动支付；已开启免密支付的个人支付：此单将在09:30自动免密支付
+	optional string 			msg_p_tip		=5;
+}
+
+//分享信息
+message ESShareInfo {
+ 	optional string				title			=1;
+	optional string				content			=2;
+	optional string				sms_content		=3;
+	optional string				picurl			=4;
+	optional string				jumpurl			=5;
+}
+
+//同步订单状态消息kPushMessageESTypeSynOrderStatusReq
+message ESSynOrderStatusReq {
+	required string 			oid				=1;
+	required int32				status			=2;
+}
+
+
+
