@@ -11,5 +11,10 @@
 @interface TicketViewController : UIViewController
 
 @property (nonatomic,strong) NSDictionary* dic;
+@property (nonatomic,strong) IBOutlet UITableView* tableview;
+
+@property (nonatomic,strong) IBOutlet UIImageView* img1;
+@property (nonatomic,strong) IBOutlet UILabel* label1;
+
 
 @end

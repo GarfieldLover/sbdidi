@@ -23,15 +23,13 @@
     
     self.title=@"我的行程";
     
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"round_back_btn_normal.png"] style:UIBarButtonItemStylePlain target:self action:@selector(goBackTo)];
-    
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(edit)];
-    
     
     self.array=[NSMutableArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ticket" ofType:@"plist"]];
     [self.tableview reloadData];
     
 }
+
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -59,8 +57,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    return 70;
+    return 105;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

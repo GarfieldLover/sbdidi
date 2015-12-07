@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>time</key>
+		<string>07:20</string>
+		<key>start</key>
+		<string>建材城富力桃园</string>
+		<key>state</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>time</key>
+		<string>预计07:21</string>
+		<key>start</key>
+		<string>硅谷先锋小区</string>
+		<key>state</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>time</key>
+		<string>预计07:25</string>
+		<key>start</key>
+		<string>知本世时代小区</string>
+		<key>state</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>time</key>
+		<string>预计07:33</string>
+		<key>start</key>
+		<string>育新地铁站</string>
+		<key>state</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>time</key>
+		<string>预计07:36</string>
+		<key>start</key>
+		<string>西小口地铁站</string>
+		<key>state</key>
+		<string>2</string>
+	</dict>
+</array>
+</plist>

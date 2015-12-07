@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyBusViewController">
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n4V-qw-88p">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n4V-qw-88p">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,27 +28,11 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="n4V-qw-88p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gca-4j-TnB"/>
-                <constraint firstAttribute="trailing" secondItem="n4V-qw-88p" secondAttribute="trailing" id="gxK-An-PD2"/>
-                <constraint firstItem="n4V-qw-88p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hNc-qs-e9a"/>
-                <constraint firstAttribute="bottom" secondItem="n4V-qw-88p" secondAttribute="bottom" id="oqa-fx-eje"/>
+                <constraint firstItem="n4V-qw-88p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2AG-4t-Dev"/>
+                <constraint firstAttribute="trailing" secondItem="n4V-qw-88p" secondAttribute="trailing" id="3MZ-G8-5lZ"/>
+                <constraint firstAttribute="bottom" secondItem="n4V-qw-88p" secondAttribute="bottom" id="PGR-kK-Aj1"/>
+                <constraint firstItem="n4V-qw-88p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y4B-hh-aFZ"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="Gca-4j-TnB"/>
-                    <exclude reference="gxK-An-PD2"/>
-                    <exclude reference="hNc-qs-e9a"/>
-                    <exclude reference="oqa-fx-eje"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=regular-widthClass=compact">
-                <mask key="constraints">
-                    <include reference="Gca-4j-TnB"/>
-                    <include reference="gxK-An-PD2"/>
-                    <include reference="hNc-qs-e9a"/>
-                    <include reference="oqa-fx-eje"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="351" y="352"/>
         </view>
     </objects>

@@ -5,12 +5,18 @@
 	<dict>
 		<key>time</key>
 		<string>07:20</string>
+		<key>time2</key>
+		<string>08:50</string>
 		<key>start</key>
 		<string>清河</string>
 		<key>end</key>
 		<string>中关村</string>
 		<key>state</key>
 		<string>待出发</string>
+		<key>start1</key>
+		<string>建材城富力桃园</string>
+		<key>end1</key>
+		<string>中关村S O H O</string>
 	</dict>
 	<dict>
 		<key>time</key>
@@ -21,6 +27,12 @@
 		<string>清河</string>
 		<key>state</key>
 		<string>待出发</string>
+		<key>time2</key>
+		<string>19:45</string>
+		<key>start1</key>
+		<string>新中关大厦</string>
+		<key>end1</key>
+		<string>建材城富力桃园</string>
 	</dict>
 </array>
 </plist>
