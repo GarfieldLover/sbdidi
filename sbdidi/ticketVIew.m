@@ -24,7 +24,7 @@
         self.backgroundColor=[UIColor clearColor];
         self.frame=frame;
         
-        [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:0.18 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
         
         NSDateFormatter* datef=[[NSDateFormatter alloc] init];
         [datef setDateFormat:@"MM月dd日"];

@@ -30,10 +30,16 @@
     
     NSString* start=[self.dic objectForKey:@"start"];
     NSString* end=[self.dic objectForKey:@"end"];
+    
+    if([start isEqualToString:@"清河"]){
+        self.img2.image=[UIImage imageNamed:@"Snip20160128_6.png"];
+    }else{
+        self.img2.image=[UIImage imageNamed:@"Snip20160128_5.png"];
+    }
 
     UILabel* ti=[[UILabel alloc] initWithFrame:CGRectMake(90, 0, self.navigationController.navigationBar.frame.size.width-90*2, 44)];
     ti.textAlignment=NSTextAlignmentCenter;
-    ti.font=[UIFont systemFontOfSize:18.0f];
+    ti.font=[UIFont systemFontOfSize:15.0f];
     ti.textColor=[UIColor colorWithRed:49/255.0 green:49/255.0 blue:49/255.0 alpha:1];
     ti.backgroundColor=[UIColor clearColor];
     ti.text=[start stringByAppendingFormat:@" - %@",end];
@@ -90,7 +96,7 @@
     UITapGestureRecognizer* tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backTap)];
     [self.backVIew addGestureRecognizer:tap];
     
-    self.ticketvIew=[[ticketAllVIew alloc] initWithFrame:CGRectMake(10, 97, self.view.frame.size.width-10*2, 330) dic:self.dic];
+    self.ticketvIew=[[ticketAllVIew alloc] initWithFrame:CGRectMake(10, 92, self.view.frame.size.width-10*2, 340) dic:self.dic];
     [win addSubview:self.ticketvIew];
     
     

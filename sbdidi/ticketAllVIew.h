@@ -17,6 +17,8 @@
 @property (nonatomic,strong) IBOutlet UILabel* label2;
 @property (nonatomic,strong) IBOutlet UILabel* label3;
 @property (nonatomic,strong) IBOutlet UILabel* label4;
+@property (nonatomic,strong) IBOutlet UILabel* label5;
+@property (nonatomic,strong) IBOutlet UIView* viewffff;
 
 - (id)initWithFrame:(CGRect)frame dic:(NSDictionary*)dic;
 

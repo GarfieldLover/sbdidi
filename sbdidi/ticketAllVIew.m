@@ -24,10 +24,11 @@
         [self addSubview:ti];
         
         ticketDownVIew* tic=[[ticketDownVIew alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 30)];
-        [self addSubview:tic];
+        [self insertSubview:tic belowSubview:self.viewffff];
         
         self.view1.layer.masksToBounds=YES;
-        self.view1.layer.cornerRadius=5;
+        self.view1.layer.cornerRadius=4
+        ;
         
         self.label1.text=[dic objectForKey:@"time"];
         self.label2.text=[dic objectForKey:@"time2"];

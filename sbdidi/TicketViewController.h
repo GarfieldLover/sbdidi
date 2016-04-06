@@ -15,6 +15,7 @@
 
 @property (nonatomic,strong) IBOutlet UIImageView* img1;
 @property (nonatomic,strong) IBOutlet UILabel* label1;
+@property (nonatomic,strong) IBOutlet UIImageView* img2;
 
 
 @end
