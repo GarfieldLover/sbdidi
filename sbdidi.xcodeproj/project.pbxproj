@@ -73,7 +73,6 @@
 		0A6F1E0B1C10733300CEF3F0 /* BusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F1E091C10733300CEF3F0 /* BusTableViewCell.xib */; };
 		0A6F1E0F1C10775700CEF3F0 /* TicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F1E0D1C10775700CEF3F0 /* TicketViewController.m */; };
 		0A6F1E101C10775700CEF3F0 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F1E0E1C10775700CEF3F0 /* TicketViewController.xib */; };
-		0A6F1E121C107A2B00CEF3F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6F1E111C107A2B00CEF3F0 /* MapKit.framework */; };
 		584DA55B1C11575D009DBFF2 /* ticketVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 584DA55A1C11575D009DBFF2 /* ticketVIew.m */; };
 		584DA55D1C117040009DBFF2 /* ticketVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584DA55C1C117040009DBFF2 /* ticketVIew.xib */; };
 		584DA5B01C117F21009DBFF2 /* ticketAllVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 584DA5AF1C117F21009DBFF2 /* ticketAllVIew.m */; };
@@ -95,6 +94,11 @@
 		584DA5D21C1196BF009DBFF2 /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584DA5D01C1196BF009DBFF2 /* StationTableViewCell.xib */; };
 		584DA5D51C11AB11009DBFF2 /* dgb_roadarrow_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584DA5D31C11AB11009DBFF2 /* dgb_roadarrow_white@2x.png */; };
 		584DA5D61C11AB11009DBFF2 /* dgb_roadarrow_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 584DA5D41C11AB11009DBFF2 /* dgb_roadarrow_white@3x.png */; };
+		58628A761D0D5C2F009D3614 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58628A751D0D5C2F009D3614 /* MapKit.framework */; };
+		58628A791D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58628A771D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png */; };
+		58628A7A1D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */; };
+		58628A7E1D0D60A7009D3614 /* NewTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58628A7C1D0D60A7009D3614 /* NewTicketViewController.m */; };
+		58628A7F1D0D60A7009D3614 /* NewTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58628A7D1D0D60A7009D3614 /* NewTicketViewController.xib */; };
 		58F02ED41C59B28200E6DE51 /* Snip20160128_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */; };
 		58F02ED51C59B28200E6DE51 /* Snip20160128_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED11C59B28200E6DE51 /* Snip20160128_4.png */; };
 		58F02ED61C59B28200E6DE51 /* Snip20160128_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED21C59B28200E6DE51 /* Snip20160128_5.png */; };
@@ -174,7 +178,6 @@
 		0A6F1E0C1C10775700CEF3F0 /* TicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketViewController.h; sourceTree = "<group>"; };
 		0A6F1E0D1C10775700CEF3F0 /* TicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketViewController.m; sourceTree = "<group>"; };
 		0A6F1E0E1C10775700CEF3F0 /* TicketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
-		0A6F1E111C107A2B00CEF3F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		584DA5591C11575D009DBFF2 /* ticketVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ticketVIew.h; sourceTree = "<group>"; };
 		584DA55A1C11575D009DBFF2 /* ticketVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ticketVIew.m; sourceTree = "<group>"; };
 		584DA55C1C117040009DBFF2 /* ticketVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ticketVIew.xib; sourceTree = "<group>"; };
@@ -200,6 +203,12 @@
 		584DA5D01C1196BF009DBFF2 /* StationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		584DA5D31C11AB11009DBFF2 /* dgb_roadarrow_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dgb_roadarrow_white@2x.png"; sourceTree = "<group>"; };
 		584DA5D41C11AB11009DBFF2 /* dgb_roadarrow_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dgb_roadarrow_white@3x.png"; sourceTree = "<group>"; };
+		58628A751D0D5C2F009D3614 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		58628A771D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dgb_ticket_inspectseal_icon@2x.png"; sourceTree = "<group>"; };
+		58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titlebar_button_bussiness_more@2x.png"; sourceTree = "<group>"; };
+		58628A7B1D0D60A7009D3614 /* NewTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTicketViewController.h; sourceTree = "<group>"; };
+		58628A7C1D0D60A7009D3614 /* NewTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTicketViewController.m; sourceTree = "<group>"; };
+		58628A7D1D0D60A7009D3614 /* NewTicketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTicketViewController.xib; sourceTree = "<group>"; };
 		58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_3.png; sourceTree = "<group>"; };
 		58F02ED11C59B28200E6DE51 /* Snip20160128_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_4.png; sourceTree = "<group>"; };
 		58F02ED21C59B28200E6DE51 /* Snip20160128_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_5.png; sourceTree = "<group>"; };
@@ -211,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A6F1E121C107A2B00CEF3F0 /* MapKit.framework in Frameworks */,
+				58628A761D0D5C2F009D3614 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +230,7 @@
 		0A6F1D6C1C10627C00CEF3F0 = {
 			isa = PBXGroup;
 			children = (
-				0A6F1E111C107A2B00CEF3F0 /* MapKit.framework */,
+				58628A751D0D5C2F009D3614 /* MapKit.framework */,
 				0A6F1D771C10627C00CEF3F0 /* sbdidi */,
 				0A6F1D761C10627C00CEF3F0 /* Products */,
 			);
@@ -240,6 +249,9 @@
 			children = (
 				0A6F1D7B1C10627C00CEF3F0 /* AppDelegate.h */,
 				0A6F1D7C1C10627C00CEF3F0 /* AppDelegate.m */,
+				58628A7B1D0D60A7009D3614 /* NewTicketViewController.h */,
+				58628A7C1D0D60A7009D3614 /* NewTicketViewController.m */,
+				58628A7D1D0D60A7009D3614 /* NewTicketViewController.xib */,
 				0A6F1DF41C106B1A00CEF3F0 /* MyBusViewController.h */,
 				0A6F1DF51C106B1A00CEF3F0 /* MyBusViewController.m */,
 				0A6F1DF61C106B1A00CEF3F0 /* MyBusViewController.xib */,
@@ -281,6 +293,8 @@
 		0A6F1D8F1C1068E800CEF3F0 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				58628A771D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png */,
+				58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */,
 				58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */,
 				58F02ED11C59B28200E6DE51 /* Snip20160128_4.png */,
 				58F02ED21C59B28200E6DE51 /* Snip20160128_5.png */,
@@ -389,6 +403,11 @@
 				TargetAttributes = {
 					0A6F1D741C10627C00CEF3F0 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -447,6 +466,7 @@
 				0A6F1DE81C106ACF00CEF3F0 /* dgb_ticket_orange@2x.png in Resources */,
 				0A6F1E061C106DEB00CEF3F0 /* LaunchImage@2x.png in Resources */,
 				0A6F1E0B1C10733300CEF3F0 /* BusTableViewCell.xib in Resources */,
+				58628A7A1D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png in Resources */,
 				0A6F1DDB1C106ACF00CEF3F0 /* dgb_stopCell_begin@3x.png in Resources */,
 				0A6F1DEA1C106ACF00CEF3F0 /* pull_bar_ticket_paper@2x.png in Resources */,
 				0A6F1D851C10627C00CEF3F0 /* Assets.xcassets in Resources */,
@@ -483,6 +503,7 @@
 				0A6F1DDC1C106ACF00CEF3F0 /* dgb_stopCell_down@2x.png in Resources */,
 				0A6F1DF01C106ACF00CEF3F0 /* star_comment@2x.png in Resources */,
 				584DA55D1C117040009DBFF2 /* ticketVIew.xib in Resources */,
+				58628A7F1D0D60A7009D3614 /* NewTicketViewController.xib in Resources */,
 				0A6F1DFA1C106D4800CEF3F0 /* ticket.plist in Resources */,
 				584DA5C51C119166009DBFF2 /* round_hollow_white2_btn@3x.png in Resources */,
 				0A6F1DE31C106ACF00CEF3F0 /* dgb_stopCell_up@3x.png in Resources */,
@@ -497,6 +518,7 @@
 				0A6F1DB41C1068E800CEF3F0 /* common_icon_startpoint@2x.png in Resources */,
 				0A6F1DE61C106ACF00CEF3F0 /* dgb_ticket_gray@2x.png in Resources */,
 				0A6F1DD61C106ACF00CEF3F0 /* dgb_bus_icon@2x.png in Resources */,
+				58628A791D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6F1D7D1C10627C00CEF3F0 /* AppDelegate.m in Sources */,
+				58628A7E1D0D60A7009D3614 /* NewTicketViewController.m in Sources */,
 				0A6F1E0F1C10775700CEF3F0 /* TicketViewController.m in Sources */,
 				584DA5B51C1185A4009DBFF2 /* ticketDownVIew.m in Sources */,
 				584DA5D11C1196BF009DBFF2 /* StationTableViewCell.m in Sources */,
@@ -607,7 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sbdidi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -622,7 +645,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sbdidi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

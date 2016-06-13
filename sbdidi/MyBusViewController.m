@@ -9,6 +9,7 @@
 #import "MyBusViewController.h"
 #import "BusTableViewCell.h"
 #import "TicketViewController.h"
+#import "NewTicketViewController.h"
 
 @interface MyBusViewController ()
 
@@ -65,9 +66,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary* dic=[self.array objectAtIndex:indexPath.row];
 
-    TicketViewController* tick=[[TicketViewController alloc] init];
-    tick.dic=dic;
-    [self.navigationController pushViewController:tick animated:YES];
+//    TicketViewController* tick=[[TicketViewController alloc] init];
+//    tick.dic=dic;
+//    [self.navigationController pushViewController:tick animated:YES];
+    
+        NewTicketViewController* tick=[[NewTicketViewController alloc] init];
+        tick.dic=dic;
+        [self.navigationController pushViewController:tick animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

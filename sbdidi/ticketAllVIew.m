@@ -21,19 +21,29 @@
         self.frame=frame;
         
         ticketVIew* ti=[[ticketVIew alloc] initWithFrame:CGRectMake(0, -5, frame.size.width, 78) dic:dic];
-        [self addSubview:ti];
+        [self insertSubview:ti belowSubview:self.img1];
         
-        ticketDownVIew* tic=[[ticketDownVIew alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 30)];
-        [self insertSubview:tic belowSubview:self.viewffff];
+//        ticketDownVIew* tic=[[ticketDownVIew alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 30)];
+//        [self insertSubview:tic belowSubview:self.viewffff];
         
         self.view1.layer.masksToBounds=YES;
-        self.view1.layer.cornerRadius=4
-        ;
+        self.view1.layer.cornerRadius=4;
         
         self.label1.text=[dic objectForKey:@"time"];
         self.label2.text=[dic objectForKey:@"time2"];
         self.label3.text=[dic objectForKey:@"start1"];
         self.label4.text=[dic objectForKey:@"end1"];
+        
+        [self.label3 sizeToFit];
+        [self.label4 sizeToFit];
+
+        CGRect rect=self.label6.frame;
+        rect.origin.x=CGRectGetMaxX(self.label3.frame)+10;
+        self.label6.frame=rect;
+        
+        rect=self.label7.frame;
+        rect.origin.x=CGRectGetMaxX(self.label4.frame)+10;
+        self.label7.frame=rect;
 
     }
     return self;
