@@ -24,7 +24,7 @@
         self.backgroundColor=[UIColor clearColor];
         self.frame=frame;
         
-        [NSTimer scheduledTimerWithTimeInterval:0.14 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:0.11 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES];
         
         NSDateFormatter* datef=[[NSDateFormatter alloc] init];
         [datef setDateFormat:@"MM月dd日"];
@@ -32,17 +32,17 @@
         self.label2.text=[dic objectForKey:@"start"];
         self.label3.text=[dic objectForKey:@"end"];
         
-        if([self.label2.text isEqualToString:@"中关村"]){
+        if([self.label2.text isEqualToString:@"清河"]){
             CGRect rect=self.label2.frame;
-            rect.origin.x+=15;
+            rect.origin.x-=17;
             self.label2.frame=rect;
             
             rect=self.img1.frame;
-            rect.origin.x+=15;
+            rect.origin.x-=17;
             self.img1.frame=rect;
             
             rect=self.label3.frame;
-            rect.origin.x+=15;
+            rect.origin.x-=17;
             self.label3.frame=rect;
         }
     }

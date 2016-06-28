@@ -73,6 +73,7 @@
 		0A6F1E0B1C10733300CEF3F0 /* BusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F1E091C10733300CEF3F0 /* BusTableViewCell.xib */; };
 		0A6F1E0F1C10775700CEF3F0 /* TicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F1E0D1C10775700CEF3F0 /* TicketViewController.m */; };
 		0A6F1E101C10775700CEF3F0 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F1E0E1C10775700CEF3F0 /* TicketViewController.xib */; };
+		5843AAC81D221175004E987A /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5843AAC71D221175004E987A /* Default-736h@3x.png */; };
 		584DA55B1C11575D009DBFF2 /* ticketVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 584DA55A1C11575D009DBFF2 /* ticketVIew.m */; };
 		584DA55D1C117040009DBFF2 /* ticketVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584DA55C1C117040009DBFF2 /* ticketVIew.xib */; };
 		584DA5B01C117F21009DBFF2 /* ticketAllVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 584DA5AF1C117F21009DBFF2 /* ticketAllVIew.m */; };
@@ -178,6 +179,7 @@
 		0A6F1E0C1C10775700CEF3F0 /* TicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketViewController.h; sourceTree = "<group>"; };
 		0A6F1E0D1C10775700CEF3F0 /* TicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketViewController.m; sourceTree = "<group>"; };
 		0A6F1E0E1C10775700CEF3F0 /* TicketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
+		5843AAC71D221175004E987A /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		584DA5591C11575D009DBFF2 /* ticketVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ticketVIew.h; sourceTree = "<group>"; };
 		584DA55A1C11575D009DBFF2 /* ticketVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ticketVIew.m; sourceTree = "<group>"; };
 		584DA55C1C117040009DBFF2 /* ticketVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ticketVIew.xib; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		0A6F1D8F1C1068E800CEF3F0 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5843AAC71D221175004E987A /* Default-736h@3x.png */,
 				58628A771D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png */,
 				58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */,
 				58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */,
@@ -447,6 +450,7 @@
 				0A6F1DDF1C106ACF00CEF3F0 /* dgb_stopCell_downCircle@3x.png in Resources */,
 				0A6F1E031C106DEB00CEF3F0 /* LaunchImage-700@2x.png in Resources */,
 				584DA5C41C119166009DBFF2 /* round_hollow_white2_btn@2x.png in Resources */,
+				5843AAC81D221175004E987A /* Default-736h@3x.png in Resources */,
 				584DA5B21C117F2E009DBFF2 /* ticketAllVIew.xib in Resources */,
 				584DA5D51C11AB11009DBFF2 /* dgb_roadarrow_white@2x.png in Resources */,
 				0A6F1DDD1C106ACF00CEF3F0 /* dgb_stopCell_down@3x.png in Resources */,
