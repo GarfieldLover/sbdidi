@@ -20,14 +20,16 @@
         self=[[[NSBundle mainBundle] loadNibNamed:@"ticketAllVIew" owner:nil options:nil] firstObject];
         self.frame=frame;
         
-        ticketVIew* ti=[[ticketVIew alloc] initWithFrame:CGRectMake(0, -5, frame.size.width, 78) dic:dic];
-        [self insertSubview:ti belowSubview:self.img1];
+        ticketVIew* ti=[[ticketVIew alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 80) dic:dic];
+        [self addSubview:ti];
+    
+        
         
 //        ticketDownVIew* tic=[[ticketDownVIew alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 30)];
 //        [self insertSubview:tic belowSubview:self.viewffff];
         
         self.view1.layer.masksToBounds=YES;
-        self.view1.layer.cornerRadius=4;
+        self.view1.layer.cornerRadius=2;
         
         self.label1.text=[dic objectForKey:@"time"];
         self.label2.text=[dic objectForKey:@"time2"];

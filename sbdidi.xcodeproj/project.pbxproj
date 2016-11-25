@@ -100,6 +100,11 @@
 		58628A7A1D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */; };
 		58628A7E1D0D60A7009D3614 /* NewTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58628A7C1D0D60A7009D3614 /* NewTicketViewController.m */; };
 		58628A7F1D0D60A7009D3614 /* NewTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58628A7D1D0D60A7009D3614 /* NewTicketViewController.xib */; };
+		58E571451DE81D1800AE7087 /* dgb_ticket_icon_ticketmiddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E571441DE81D1800AE7087 /* dgb_ticket_icon_ticketmiddle@2x.png */; };
+		58E571471DE8266A00AE7087 /* Snip20161125_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E571461DE8266A00AE7087 /* Snip20161125_7.png */; };
+		58E571491DE826CD00AE7087 /* Snip20161125_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E571481DE826CD00AE7087 /* Snip20161125_12.png */; };
+		58E5714B1DE827B300AE7087 /* common_icon_righ.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E5714A1DE827B300AE7087 /* common_icon_righ.png */; };
+		58E5714E1DE8295E00AE7087 /* UINavigationBar+GLTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E5714D1DE8295E00AE7087 /* UINavigationBar+GLTransform.m */; };
 		58F02ED41C59B28200E6DE51 /* Snip20160128_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */; };
 		58F02ED51C59B28200E6DE51 /* Snip20160128_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED11C59B28200E6DE51 /* Snip20160128_4.png */; };
 		58F02ED61C59B28200E6DE51 /* Snip20160128_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F02ED21C59B28200E6DE51 /* Snip20160128_5.png */; };
@@ -211,6 +216,12 @@
 		58628A7B1D0D60A7009D3614 /* NewTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTicketViewController.h; sourceTree = "<group>"; };
 		58628A7C1D0D60A7009D3614 /* NewTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTicketViewController.m; sourceTree = "<group>"; };
 		58628A7D1D0D60A7009D3614 /* NewTicketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTicketViewController.xib; sourceTree = "<group>"; };
+		58E571441DE81D1800AE7087 /* dgb_ticket_icon_ticketmiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dgb_ticket_icon_ticketmiddle@2x.png"; sourceTree = "<group>"; };
+		58E571461DE8266A00AE7087 /* Snip20161125_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161125_7.png; sourceTree = "<group>"; };
+		58E571481DE826CD00AE7087 /* Snip20161125_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161125_12.png; sourceTree = "<group>"; };
+		58E5714A1DE827B300AE7087 /* common_icon_righ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_icon_righ.png; sourceTree = "<group>"; };
+		58E5714C1DE8295E00AE7087 /* UINavigationBar+GLTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+GLTransform.h"; sourceTree = "<group>"; };
+		58E5714D1DE8295E00AE7087 /* UINavigationBar+GLTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+GLTransform.m"; sourceTree = "<group>"; };
 		58F02ED01C59B28200E6DE51 /* Snip20160128_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_3.png; sourceTree = "<group>"; };
 		58F02ED11C59B28200E6DE51 /* Snip20160128_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_4.png; sourceTree = "<group>"; };
 		58F02ED21C59B28200E6DE51 /* Snip20160128_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20160128_5.png; sourceTree = "<group>"; };
@@ -275,6 +286,8 @@
 				584DA5AF1C117F21009DBFF2 /* ticketAllVIew.m */,
 				584DA5B11C117F2E009DBFF2 /* ticketAllVIew.xib */,
 				0A6F1D841C10627C00CEF3F0 /* Assets.xcassets */,
+				58E5714C1DE8295E00AE7087 /* UINavigationBar+GLTransform.h */,
+				58E5714D1DE8295E00AE7087 /* UINavigationBar+GLTransform.m */,
 				0A6F1D891C10627C00CEF3F0 /* Info.plist */,
 				0A6F1DF91C106D4800CEF3F0 /* ticket.plist */,
 				584DA5CC1C1195E7009DBFF2 /* station.plist */,
@@ -295,6 +308,10 @@
 		0A6F1D8F1C1068E800CEF3F0 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				58E5714A1DE827B300AE7087 /* common_icon_righ.png */,
+				58E571481DE826CD00AE7087 /* Snip20161125_12.png */,
+				58E571461DE8266A00AE7087 /* Snip20161125_7.png */,
+				58E571441DE81D1800AE7087 /* dgb_ticket_icon_ticketmiddle@2x.png */,
 				5843AAC71D221175004E987A /* Default-736h@3x.png */,
 				58628A771D0D5E25009D3614 /* dgb_ticket_inspectseal_icon@2x.png */,
 				58628A781D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png */,
@@ -406,6 +423,7 @@
 				TargetAttributes = {
 					0A6F1D741C10627C00CEF3F0 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = ZLU2H6WNEP;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -468,6 +486,7 @@
 				0A6F1DAC1C1068E800CEF3F0 /* arrive_icon_ticket_pressed@2x.png in Resources */,
 				0A6F1DDA1C106ACF00CEF3F0 /* dgb_stopCell_begin@2x.png in Resources */,
 				0A6F1DE81C106ACF00CEF3F0 /* dgb_ticket_orange@2x.png in Resources */,
+				58E5714B1DE827B300AE7087 /* common_icon_righ.png in Resources */,
 				0A6F1E061C106DEB00CEF3F0 /* LaunchImage@2x.png in Resources */,
 				0A6F1E0B1C10733300CEF3F0 /* BusTableViewCell.xib in Resources */,
 				58628A7A1D0D5E25009D3614 /* titlebar_button_bussiness_more@2x.png in Resources */,
@@ -476,9 +495,11 @@
 				0A6F1D851C10627C00CEF3F0 /* Assets.xcassets in Resources */,
 				0A6F1DE51C106ACF00CEF3F0 /* dgb_stopCell_upCircle@3x.png in Resources */,
 				0A6F1DB11C1068E800CEF3F0 /* bts_general_start@3x.png in Resources */,
+				58E571471DE8266A00AE7087 /* Snip20161125_7.png in Resources */,
 				584DA5D61C11AB11009DBFF2 /* dgb_roadarrow_white@3x.png in Resources */,
 				0A6F1DEC1C106ACF00CEF3F0 /* round_back_btn_normal@2x.png in Resources */,
 				0A6F1DB01C1068E800CEF3F0 /* bts_general_start@2x.png in Resources */,
+				58E571451DE81D1800AE7087 /* dgb_ticket_icon_ticketmiddle@2x.png in Resources */,
 				0A6F1DD91C106ACF00CEF3F0 /* dgb_menuOrder_iconBus@3x.png in Resources */,
 				0A6F1DB71C1068E800CEF3F0 /* driverpage_icon_litterstare@3x.png in Resources */,
 				0A6F1DF31C106ACF00CEF3F0 /* star_content@3x.png in Resources */,
@@ -501,6 +522,7 @@
 				584DA5C71C119166009DBFF2 /* share_icon_normal@3x.png in Resources */,
 				0A6F1DE41C106ACF00CEF3F0 /* dgb_stopCell_upCircle@2x.png in Resources */,
 				584DA5B91C118DCD009DBFF2 /* pull_bar_normal@2x.png in Resources */,
+				58E571491DE826CD00AE7087 /* Snip20161125_12.png in Resources */,
 				0A6F1DB61C1068E800CEF3F0 /* driverpage_icon_litterstare@2x.png in Resources */,
 				0A6F1DDE1C106ACF00CEF3F0 /* dgb_stopCell_downCircle@2x.png in Resources */,
 				0A6F1DAD1C1068E800CEF3F0 /* arrive_icon_ticket_pressed@3x.png in Resources */,
@@ -535,6 +557,7 @@
 			files = (
 				0A6F1D7D1C10627C00CEF3F0 /* AppDelegate.m in Sources */,
 				58628A7E1D0D60A7009D3614 /* NewTicketViewController.m in Sources */,
+				58E5714E1DE8295E00AE7087 /* UINavigationBar+GLTransform.m in Sources */,
 				0A6F1E0F1C10775700CEF3F0 /* TicketViewController.m in Sources */,
 				584DA5B51C1185A4009DBFF2 /* ticketDownVIew.m in Sources */,
 				584DA5D11C1196BF009DBFF2 /* StationTableViewCell.m in Sources */,
@@ -636,9 +659,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZLU2H6WNEP;
 				INFOPLIST_FILE = sbdidi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.SohuVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sbdidididi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -651,9 +675,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZLU2H6WNEP;
 				INFOPLIST_FILE = sbdidi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.SohuVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sbdidididi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

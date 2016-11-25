@@ -23,6 +23,7 @@
 @property (nonatomic,strong) IBOutlet UILabel* label7;
 @property (nonatomic,strong) IBOutlet UIImageView* img1;
 @property (nonatomic,strong) IBOutlet UIImageView* img2;
+@property (nonatomic,strong) IBOutlet UIImageView* imgLine;
 
 - (id)initWithFrame:(CGRect)frame dic:(NSDictionary*)dic;
 

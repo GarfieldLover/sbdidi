@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MyBusViewController.h"
+#import "UINavigationBar+GLTransform.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,8 @@
     MyBusViewController* bus=[[MyBusViewController alloc] init];
     
     UINavigationController* na=[[UINavigationController alloc] initWithRootViewController:bus];
-    
+    [na.navigationBar setBackgroundColor:[UIColor whiteColor]];
+
     self.window.rootViewController=na;
     
     [self.window makeKeyAndVisible];
