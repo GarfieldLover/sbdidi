@@ -42,6 +42,11 @@
     self.view1.layer.cornerRadius=2;
    ticketAllVIew*ticketvIew= [[ticketAllVIew alloc] initWithFrame:CGRectMake(0, 0, self.view1.frame.size.width, self.view1.frame.size.height) dic:self.dic];
     [self.view1 addSubview:ticketvIew];
+    self.view1.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.view1.layer.shadowOffset = CGSizeMake(5, 5);
+    self.view1.layer.shadowOpacity = 0;
+    self.view1.layer.shadowRadius = 5;
+
 }
 
 -(void)goBackTo

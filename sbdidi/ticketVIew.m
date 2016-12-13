@@ -34,7 +34,7 @@
 
         self.colorArray = [NSMutableArray arrayWithObjects:color1,color2,color3,color4,color5,color6, nil];
         
-        [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(setBackColor) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(setBackColor) userInfo:nil repeats:YES];
         
         NSDateFormatter* datef=[[NSDateFormatter alloc] init];
         [datef setDateFormat:@"MM月dd日"];
