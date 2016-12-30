@@ -27,13 +27,14 @@
         
         UIColor* color1 =[UIColor colorWithRed:83/255.0 green:150/255.0 blue:204/255.0 alpha:1];
         UIColor* color2 =[UIColor colorWithRed:201/255.0 green:83/255.0 blue:215/255.0 alpha:1];
-        UIColor* color3 =[UIColor colorWithRed:83/255.0 green:195/255.0 blue:186/255.0 alpha:1];
-        UIColor* color4 =[UIColor colorWithRed:135/255.0 green:104/255.0 blue:215/255.0 alpha:1];
-        UIColor* color5 =[UIColor colorWithRed:83/255.0 green:125/255.0 blue:213/255.0 alpha:1];
-        UIColor* color6 =[UIColor colorWithRed:171/255.0 green:116/255.0 blue:206/255.0 alpha:1];
+//        UIColor* color3 =[UIColor colorWithRed:83/255.0 green:195/255.0 blue:186/255.0 alpha:1];
+//        UIColor* color4 =[UIColor colorWithRed:135/255.0 green:104/255.0 blue:215/255.0 alpha:1];
+//        UIColor* color5 =[UIColor colorWithRed:83/255.0 green:125/255.0 blue:213/255.0 alpha:1];
+//        UIColor* color6 =[UIColor colorWithRed:171/255.0 green:116/255.0 blue:206/255.0 alpha:1];
 
-        self.colorArray = [NSMutableArray arrayWithObjects:color1,color2,color3,color4,color5,color6, nil];
-        
+//        self.colorArray = [NSMutableArray arrayWithObjects:color1,color2,color3,color4,color5,color6, nil];
+        self.colorArray = [NSMutableArray arrayWithObjects:color1,color2, nil];
+
         [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(setBackColor) userInfo:nil repeats:YES];
         
         NSDateFormatter* datef=[[NSDateFormatter alloc] init];
@@ -64,7 +65,7 @@
 
 -(void)setBackColor
 {
-    int index = self.xxx % 6;
+    int index = self.xxx % 2;
     
     self.backgroundColor = self.colorArray[index];
     self.xxx++;
